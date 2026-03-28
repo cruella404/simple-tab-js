@@ -10,3 +10,5 @@ https://roadmap.sh/projects/basic-html-website
 https://roadmap.sh/projects/portfolio-website
 <br>
 https://roadmap.sh/projects/changelog-component
+<br>
+https://roadmap.sh/projects/single-page-cv
