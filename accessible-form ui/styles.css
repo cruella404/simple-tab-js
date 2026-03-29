@@ -1,0 +1,149 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  font-family: "Poppins", sans-serif;
+  color: #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  width: 350px;
+}
+
+.form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== TITLE ===== */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ===== INPUT GROUP ===== */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: white;
+  outline: none;
+}
+
+/* FLOATING LABEL */
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: #94a3b8;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -8px;
+  font-size: 12px;
+  background: #1e293b;
+  padding: 0 5px;
+}
+
+/* ===== PASSWORD TOGGLE ===== */
+.password-group {
+  position: relative;
+}
+
+.toggle {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+}
+
+/* hide checkbox */
+#toggle {
+  display: none;
+}
+
+/* CSS trick to show password */
+#toggle:checked ~ input {
+  -webkit-text-security: none;
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress {
+  height: 8px;
+  background: #334155;
+  border-radius: 5px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  width: 25%;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  transition: 0.3s;
+}
+
+/* simulate progress (static states) */
+input:valid ~ .progress .bar {
+  width: 100%;
+}
+
+/* ===== CHECKLIST ===== */
+.checklist {
+  list-style: none;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.checklist li {
+  opacity: 0.6;
+  margin-bottom: 5px;
+}
+
+/* highlight when form valid */
+input:valid ~ .checklist li {
+  opacity: 1;
+  color: #22c55e;
+}
+
+/* ===== BUTTON ===== */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
