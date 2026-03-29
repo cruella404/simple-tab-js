@@ -1,0 +1,95 @@
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffd3d5, #f3c1e0);
+  color: #2d033b;
+  padding: 40px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ===== TITLE ===== */
+.title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+/* ===== ACCORDION ===== */
+.accordion {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(84, 8, 99, 0.15);
+}
+
+/* ===== ITEM ===== */
+.accordion-item {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+.accordion-header {
+  width: 100%;
+  background: #e274bf;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: #fbaaf2;
+  color: black;
+}
+
+/* ICON */
+.accordion-header i {
+  transition: transform 0.3s ease;
+}
+
+/* ===== BODY ===== */
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  background: #f5efef;
+  transition: max-height 0.4s ease;
+}
+
+.accordion-body p {
+  padding: 15px 20px;
+  color: #0505059c;
+  font-size: 16px;
+}
+
+/* ===== ACTIVE STATE ===== */
+.accordion-item.active .accordion-body {
+  max-height: 200px;
+}
+
+.accordion-item.active .accordion-header {
+  background: #ffaee5;
+  color: black;
+}
+
+.accordion-item.active .accordion-header i {
+  transform: rotate(180deg);
+}
