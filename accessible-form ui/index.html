@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form UI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <form class="form">
+
+    <h2>Create Account</h2>
+
+    <!-- FULL NAME -->
+    <div class="input-group">
+      <input type="text" required>
+      <label>Full Name</label>
+    </div>
+
+    <!-- EMAIL -->
+    <div class="input-group">
+      <input type="email" required>
+      <label>Email</label>
+    </div>
+
+    <!-- PASSWORD -->
+    <div class="input-group password-group">
+      <input type="password" required id="password">
+      <label>Password</label>
+
+      <!-- Toggle -->
+      <input type="checkbox" id="toggle">
+      <label for="toggle" class="toggle">👁</label>
+    </div>
+
+    <!-- CONFIRM PASSWORD -->
+    <div class="input-group">
+      <input type="password" required>
+      <label>Confirm Password</label>
+    </div>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress">
+      <div class="bar"></div>
+    </div>
+
+    <!-- CHECKLIST -->
+    <ul class="checklist">
+      <li>✔ Name entered</li>
+      <li>✔ Valid email</li>
+      <li>✔ Password added</li>
+      <li>✔ Password confirmed</li>
+    </ul>
+
+    <button type="submit">Submit</button>
+
+  </form>
+</div>
+
+</body>
+</html>
