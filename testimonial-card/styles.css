@@ -1,0 +1,196 @@
+/* ===== GLOBAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
+  padding: 40px;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #cbd5f5;
+}
+
+.section {
+  margin-bottom: 60px;
+}
+
+/* ===== 1. CARD LAYOUT ===== */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 220px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* ===== 2. GRID ===== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.grid-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== 3. MEDIA CARD ===== */
+.media-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.media-card img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+/* ===== 4. HIGHLIGHT ===== */
+.highlight {
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  padding: 25px;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== 5. MASONRY ===== */
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.m-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.tall {
+  grid-row: span 2;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+/* ===== 6. FEATURED GRID ===== */
+.featured-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.featured {
+  padding: 30px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  font-size: 18px;
+}
+
+.side {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== 7. GLASS CARDS ===== */
+.glass-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.glass-card {
+  flex: 1 1 250px;
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ===== 8. OVERLAPPING CARDS ===== */
+.overlap {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.o-card {
+  flex: 1 1 220px;
+  max-width: 260px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* center card slightly elevated instead of overlapping */
+.middle {
+  transform: translateY(-15px) scale(1.05);
+  z-index: 2;
+  color: white;
+}
+
+.o-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
