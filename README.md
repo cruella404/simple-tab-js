@@ -26,3 +26,5 @@ https://roadmap.sh/projects/image-grid
 https://roadmap.sh/projects/accordion
 <br>
 https://roadmap.sh/projects/cookie-consent
+<br>
+https://roadmap.sh/projects/weather-app
